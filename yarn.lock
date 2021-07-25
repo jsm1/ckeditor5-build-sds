@@ -392,6 +392,14 @@
     "@ckeditor/ckeditor5-utils" "^29.0.0"
     lodash-es "^4.17.15"
 
+"@ckeditor/ckeditor5-word-count@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-word-count/-/ckeditor5-word-count-29.0.0.tgz#ee91f449530d7f6e0862f4c8bbaf30d17bbacd58"
+  integrity sha512-pICxXpuWs9+L3zh8IpyfVZTD4MnOQ3OYutRb0KTK8wmpL+D4ENJod1RcpW+XJfVmStfH+rILZgQkCwmf0bBM6g==
+  dependencies:
+    ckeditor5 "^29.0.0"
+    lodash-es "^4.17.15"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

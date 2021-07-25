@@ -13,6 +13,8 @@ const { bundler, styles } = require( '@ckeditor/ckeditor5-dev-utils' );
 const CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
 
+const iconReplacements = require(path.resolve(__dirname, 'theme', 'icons', 'index.js'))
+
 module.exports = {
 	devtool: 'source-map',
 	performance: { hints: false },
@@ -54,7 +56,11 @@ module.exports = {
 		new webpack.BannerPlugin( {
 			banner: bundler.getLicenseBanner(),
 			raw: true
-		} )
+		} ),
+		...iconReplacements.map(([iconPath, replacement]) => new webpack.NormalModuleReplacementPlugin(
+			iconPath,
+			path.resolve(__dirname, 'theme', 'icons', replacement)
+		)),
 	],
 
 	module: {
